@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * 5. 축 당신 승(컴 : 보, 당신 : 가위) or ㅠㅠ 컴 승(컴 : 주먹, 당신 : 가위)
  * 6. 위 메세지가 출력된 후 프로그램을 종료 하세요.
  */
-public class GawiBawiBoGame {
+public class GawiBawiBoGame {//박동원
 
 	public static void main(String[] args) {
 		int start = JOptionPane.showConfirmDialog(null, "게임 하실래요?","confirm",JOptionPane.YES_NO_OPTION);
