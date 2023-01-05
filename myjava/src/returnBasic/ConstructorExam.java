@@ -1,0 +1,105 @@
+package returnBasic;
+
+import javax.management.remote.SubjectDelegationPermission;
+
+//부모 클래스가 될 기본 클래스 정의 해봅니다.
+class Parent extends Object{
+	
+	private String myName;//이름멤버변수
+	private int age;//나이멤버변수
+	
+	public Parent(String myName, int age) {//기본생성자 //파라미터가 없어서
+		super(); // Object 의 기본 생성자 호출
+		
+		this.age = age;
+		this.myName = myName;
+	}
+	
+	protected void myJob() {
+		
+		System.out.println("Parent 클래스의 직업은 어부");
+		
+	}
+}
+
+
+class Son extends Parent{
+	
+	private String myJob;
+	
+	public Son() {
+		// super 로 부모 호출, (파라미터 기본값)
+		super(null,0);//Parent 기본생성자 호출.. 	
+		
+	}
+	
+	protected void myJob() {
+		super.myJob();
+		System.out.println("Son 클래스의 직업은 자바프로그래머");
+	}
+}
+
+
+
+
+
+class UserEmail{
+
+	private String email;
+	
+	
+	
+	
+	public UserEmail(String email) {//생성자
+		this.email = email;
+	}
+	
+	//email 값을 리턴하는 getter 생성.
+	public String getEmail() {
+		return email;
+	}
+}
+
+public class ConstructorExam {
+
+	UserEmail email;
+	
+	public static void main(String[] args) {
+		
+		Son son = new Son();//Son 기본 인스턴스 생성
+		Object object = son;//Ref 를 복사해서 넘겨준다.
+		Parent parent = (Parent)object;//Object Ref 하는 참조값을 parent 에게 넘겨준다.
+		Parent p2 = new Son();
+	
+		
+//		parent = null;
+//		p2 = null;
+		
+		System.out.println(object.equals(son));
+		System.out.println(parent.equals(p2));
+		((Parent)object).myJob();
+		
+		
+		
+		
+		
+		
+		
+//		if(son == object) {
+//			//rtype 에서 == 연산자를 쓰면, 같은 객체니? 라고묻는 것입니다.
+//			//즉 Reference 값이 같니?
+//			System.out.println("두 객체는 같은 객체입니다.");
+//			System.out.println(son);
+//			System.out.println(object);
+//		}
+//		
+//		
+//		
+//		System.out.println("이메일 입력해주세요.");
+//		String email = "designkim@gmail.com";
+//		ConstructorExam play = new ConstructorExam();
+//		play.email = new UserEmail(email);
+//		System.out.println(play.email.getEmail());
+	}
+
+}

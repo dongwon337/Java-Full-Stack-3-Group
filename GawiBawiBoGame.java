@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * 6. 위 메세지가 출력된 후 프로그램을 종료 하세요.
  */
 public class GawiBawiBoGame {
-
+kim
 	public static void main(String[] args) {
 		int start = JOptionPane.showConfirmDialog(null, "게임 하실래요?","confirm",JOptionPane.YES_NO_OPTION);
 		
