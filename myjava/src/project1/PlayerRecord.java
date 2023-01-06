@@ -1,6 +1,6 @@
 package project1;
 //사용자의 게임 결과 정보를 유지하는 DTO
-//박동원
+//박동원asdfasdf
 
 public class PlayerRecord {
 	
